@@ -16,5 +16,3 @@ search_button = driver.find_element('name', 'btnK')
 search_button.submit()
 time.sleep(3)
 driver.quit()
-#zmiana
-#2ga zmiana
