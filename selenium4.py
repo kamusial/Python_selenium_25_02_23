@@ -1,5 +1,3 @@
-from selenium import webdriver
-
 #Page Object Model
 
 class LoginPage:
