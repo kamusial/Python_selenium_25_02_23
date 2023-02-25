@@ -1,7 +1,9 @@
 from selenium import webdriver
 #from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
 import time
 import datetime
+from selenium.common.exceptions import NoSuchElementException
 
 def make_screenshot(driver):
     teraz = datetime.datetime.now()
@@ -14,12 +16,13 @@ print('Nazwa strony',driver.title)
 time.sleep(1)
 
 try:
-    username_field = driver.find_element('id', 'user-name')
-    username_field.clear()
-    username_field.send_keys('standard_user')
-except:
+    username_field = driver.find_element(By.ID, 'user-name')
+except NoSuchElementException:
     make_screenshot(driver)
+    raise
 
+username_field.clear()
+username_field.send_keys('standard_user')
 password_field = driver.find_element('xpath', '//*[@id="password"]')
 username_field.clear()
 password_field.send_keys('secret_sauce')
