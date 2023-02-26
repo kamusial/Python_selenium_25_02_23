@@ -39,3 +39,18 @@ WHILE LOOP
 
 Loop a list
     Log     ${my_list}
+
+Loop range 1
+    FOR    ${index}    IN RANGE    10
+        Log   ${index}
+    END
+
+Loop range 2
+    FOR    ${index}    IN RANGE    3    10
+        Log   ${index}
+    END
+
+Loop range 3
+    FOR    ${index}    IN RANGE    3    30    3
+        Log   ${index}
+    END
