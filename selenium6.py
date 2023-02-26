@@ -8,10 +8,10 @@ test_data = [
     ('standard_user', 'secret_sauce', 'https://www.saucedemo.com/inventory.html'),
     ('locked_out_user', 'secret_sauce', 'https://www.saucedemo.com/'),
     ('problem_user', 'secret_sauce', 'https://www.saucedemo.com/inventory.html'),
-    ('performance_glitch_user', 'secret_sauce', 'https://www.saucedemo.com/inventory.html')
+    (www.saucedemo.com/inventory.html')
 ]
 
-@pytest.mark.parametrize('username, password, url', test_data)
+@pytest.mark.parametrize()
 def test_login_page(username, password, url):
     driver = webdriver.Chrome()
     page = LoginPage(driver)
