@@ -1,0 +1,1 @@
+print('linia1')
