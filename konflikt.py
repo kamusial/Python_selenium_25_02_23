@@ -1,1 +1,1 @@
-print('linia1')
+print('linia1 - Kamil zmiana')
